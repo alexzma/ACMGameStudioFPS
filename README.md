@@ -36,7 +36,19 @@ Add to list of remotes
 Now you do stuff in your scene and you want to push to your branch
 
 `git add .`  
+`git commit -m "commit message"`
 `git pull`  
 `git push origin <easy_name_to_access>`  
+
+You're done with your new changes and you want to add it to the main branch  
+
+`git checkout master`  
+`git pull origin master`  
+`git merge <name_of_branch>`  
+`git push origin master`  
+`git checkout <name_of_branch>`  
+
+
+
 
 
