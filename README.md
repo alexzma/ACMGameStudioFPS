@@ -48,7 +48,8 @@ You're done with your new changes and you want to add it to the main branch
 `git push origin master`  
 `git checkout <name_of_branch>`  
 
-
+If at any point you need to update from the main branch  
+`git pull origin master`  
 
 
 
