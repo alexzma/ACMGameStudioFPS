@@ -4,7 +4,7 @@ This project is a networked FPS developed by students at ACM Game Studio at UCLA
 
 //TODO Add more detail and pics
 
-#Contributors:  
+# Contributors:  
 
 | Contributors | Branch Name |
 | ------------- | ------------- |
@@ -55,5 +55,5 @@ You're done with your new changes and you want to add it to the main branch
 If at any point you need to update from the main branch  
 `git pull origin master`  
 
-
+If you want you can also issue a pull request (This is what most companies do I believe)
 
