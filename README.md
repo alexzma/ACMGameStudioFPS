@@ -4,16 +4,20 @@ This project is a networked FPS developed by students at ACM Game Studio at UCLA
 
 //TODO Add more detail and pics
 
-# Contributions:
-* Kevin Chuang (branch: kevin)
-* Daniel Park
-* Ziyan Wang
-* Nicholas Browning (branch: nick)
-* Bryant Ta
-* Liam O’Connor
-* Alexander Ma
-* Valentin Lagunes
-* Daniel Jaffe
+#Contributors:  
+
+| Contributors | Branch Name |
+| ------------- | ------------- |
+| Kevin Chuang  | kevin  |
+| Daniel Park  | danielp |
+| Ziyan Wang (Jason)  | jason  |
+| Nicholas Browning  | nick  |
+| Bryant Ta  | bryant  |
+| Liam O'Connor  | liam  |
+| Alexander Ma  | alex  |
+| Valentin Lagunes  | valentin  |
+| Daniel Jaffe | danielj  |
+
 
 # How to use branches:  
 
