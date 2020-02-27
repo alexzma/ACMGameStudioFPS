@@ -13,6 +13,7 @@ public class Gun : MonoBehaviour
     public int baseAmmoCap = 10;
     public float baseReloadDelay = 0.5f;
     public float baseAimZoom = 1.2f;                // Mult on default view
+    public int baseShotsAtOnce = 1;                 // Shotguns and similar - still uses one "ammo"
 
     // Do we want finite total ammo (R6) or infinite (Overwatch)
     
@@ -94,20 +95,38 @@ public class Gun : MonoBehaviour
             fired.Invoke();
 
             // Hitscan
-            Ray mousePos = viewCam.ScreenPointToRay(Input.mousePosition);
+            Ray bulletTrajec = viewCam.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
-            if (Physics.Raycast(mousePos, out hit, Mathf.Infinity))
+            for (int i = 0; i < baseShotsAtOnce; i++)
             {
-                //Debug.DrawLine(transform.position, hit.point, Color.red, 2);
-                DebugDrawLine(transform.position, hit.point, 10, 0.98f);
-                Debug.Log("Did Hit");
-                print(hit.point);
+                bulletTrajec.direction = bulletTrajec.direction + Random.insideUnitSphere * 0.5f * (100-baseAcc)/100;   // Can adjust 2nd num to restrict Acc range
+                if (Physics.Raycast(bulletTrajec, out hit, Mathf.Infinity))
+                {
+                    Debug.DrawLine(transform.position, hit.point, Color.red, 20);
+                    DebugDrawLine(transform.position, hit.point, 10, 0.98f);
+                    Debug.Log("Did Hit");
+                    print(hit.point);
+                }
+                else
+                {
+                    //DebugDrawLine(transform.position, hit.point, 10, 0.9f);
+                    Debug.Log("Did not Hit");
+                }
             }
-            else
-            {
-                //DebugDrawLine(transform.position, hit.point, 10, 0.9f);
-                Debug.Log("Did not Hit");
-            }
+
+            // old single shot raycast - no recoil built in
+            //if (Physics.Raycast(mousePos, out hit, Mathf.Infinity))
+            //{
+            //    //Debug.DrawLine(transform.position, hit.point, Color.red, 2);
+            //    DebugDrawLine(transform.position, hit.point, 10, 0.98f);
+            //    Debug.Log("Did Hit");
+            //    print(hit.point);
+            //}
+            //else
+            //{
+            //    //DebugDrawLine(transform.position, hit.point, 10, 0.9f);
+            //    Debug.Log("Did not Hit");
+            //}
 
             canFire = false;
         }
