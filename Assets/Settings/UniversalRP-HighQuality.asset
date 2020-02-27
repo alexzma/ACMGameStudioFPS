@@ -16,12 +16,7 @@ MonoBehaviour:
   k_AssetPreviousVersion: 5
   m_RendererType: 1
   m_RendererData: {fileID: 0}
-  m_RendererDataList:
-<<<<<<< HEAD
-  - {fileID: 11400000, guid: e5a03a9b794f0d34aacdcba465adc7c0, type: 2}
-=======
-  - {fileID: 11400000, guid: f297c4f3814ee354183b2017970065ce, type: 2}
->>>>>>> valentin
+  m_RendererDataList: {fileID: 11400000, guid: f297c4f3814ee354183b2017970065ce, type: 2}
   m_DefaultRendererIndex: 0
   m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
