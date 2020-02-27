@@ -31,6 +31,16 @@ If creating a new branch
 To do stuff in your new branch   
 `git checkout <name_of_new_branch>` 
   
+There are two different branches. One is on your local machine, and one is the remote origin branch.  
+If your local branch isn't connected to the remote/origin/<branch>, create a local branch connected to the remote  
+`git fetch origin <name_of_branch>`  
+fetching will load the data but not update it to your local directory
+
+and then  
+`git checkout -b <name_of_branch> origin/<name_of_branch>`  
+
+it should now be so you can use <name_of_branch> as your branch again.
+
 To check the branches (and find your branch)  
 `git branch -a`
   
@@ -56,4 +66,3 @@ If at any point you need to update from the main branch
 `git pull origin master`  
 
 If you want you can also issue a pull request (This is what most companies do I believe)
-
