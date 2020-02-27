@@ -6,6 +6,7 @@ public class KeyListener : MonoBehaviour
 {
     public Activator activator;
     public GameObject menu;
+    public GameObject teamDisplay;
     public SetCursor setCursor;
     public Texture2D image;
 
@@ -21,5 +22,16 @@ public class KeyListener : MonoBehaviour
             activator.ToggleActivate(menu);
             setCursor.ChangeCursor(image);
         }
+		if (Input.GetKeyDown("tab"))
+		{
+            activator.ToggleActivate(teamDisplay);
+			if (setCursor.IsChanged())
+			{
+                setCursor.ResetCursor();
+            } else
+			{
+                setCursor.ChangeCursor(image);
+			}
+		}
     }
 }
