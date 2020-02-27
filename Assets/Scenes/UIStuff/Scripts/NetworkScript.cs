@@ -36,9 +36,9 @@ namespace UnityEngine.Networking
             manager.StartClient();
         }
 
-        public void SetClientName()
-        {
+        public void SetAddress()
+		{
             manager.networkAddress = text.text;
-        }
+		}
     }
 }
