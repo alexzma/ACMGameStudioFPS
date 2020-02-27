@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: b832abf9ae47feb43b373ceac974b1ea
+=======
+guid: 491d99a7f39147e45aeb4d243943ef9f
+>>>>>>> valentin
 ModelImporter:
   serializedVersion: 20100
   internalIDToNameTable: []

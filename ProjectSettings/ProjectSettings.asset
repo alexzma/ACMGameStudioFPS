@@ -4,7 +4,11 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 20
+<<<<<<< HEAD
   productGUID: 0b43bd7350c154447ae2968db6c03a47
+=======
+  productGUID: 24451435de9fbf5418304a4c298d3144
+>>>>>>> valentin
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
