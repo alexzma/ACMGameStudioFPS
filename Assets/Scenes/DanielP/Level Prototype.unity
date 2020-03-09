@@ -317,6 +317,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &15497174 stripped
@@ -526,6 +530,10 @@ PrefabInstance:
     - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_Name
       value: Terrarium (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2653632991702679575, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_LocalScale.x
@@ -1095,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door2_3
       objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -1164,6 +1176,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1519,6 +1535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &185079345 stripped
@@ -1526,6 +1546,140 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5128037106654639571, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
   m_PrefabInstance: {fileID: 185079344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &193801073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193801078}
+  - component: {fileID: 193801077}
+  - component: {fileID: 193801076}
+  - component: {fileID: 193801075}
+  - component: {fileID: 193801074}
+  - component: {fileID: 193801079}
+  m_Layer: 0
+  m_Name: CameraMan
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &193801074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2acbe26ef6ca54259a91fbcc79784993, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  _groundChecker: {fileID: 1833363052}
+  _camera: {fileID: 1619789885}
+  outTripRadius: 5
+--- !u!136 &193801075
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &193801076
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &193801077
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &193801078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10, y: 3, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1833363053}
+  - {fileID: 1619789888}
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!143 &193801079
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193801073}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 90
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &199285501
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1689,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 199285502}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corridor_Stair (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1574,6 +1728,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1692,6 +1850,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -2168,6 +2330,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_5
       objectReference: {fileID: 0}
+    - target: {fileID: 106282, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 439240, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -37.5
@@ -2229,6 +2395,10 @@ PrefabInstance:
     - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_Name
       value: Platform_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4830879784700914, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3078,6 +3248,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -3295,6 +3469,10 @@ PrefabInstance:
     - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_Name
       value: floor_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3635,6 +3813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door1_4
       objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -3749,6 +3931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &435053859 stripped
@@ -3810,6 +3996,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -4030,6 +4220,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4315,6 +4509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &504339563 stripped
@@ -4492,6 +4690,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrarium (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2653632991520276766, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.25
@@ -4528,6 +4730,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4664,6 +4870,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor_I (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -4799,6 +5009,10 @@ PrefabInstance:
     - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_Name
       value: CenterPlatform (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3159718159962237608, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5050,6 +5264,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -5560,6 +5778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor_X (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 152896, guid: d17bc9c1cdef1c5448255edad31c1c61, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 462610, guid: d17bc9c1cdef1c5448255edad31c1c61, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5700,6 +5922,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door2_5
       objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -5826,6 +6052,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrarium (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2653632991520276766, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.15
@@ -5943,6 +6173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CenterPlatform (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3159718159962237608, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -6012,6 +6246,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6086,6 +6324,10 @@ PrefabInstance:
     - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_Name
       value: floor_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6228,7 +6470,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 778604555}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corridor_Stair (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6311,6 +6553,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -6473,6 +6719,10 @@ PrefabInstance:
     - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_Name
       value: floor_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6761,6 +7011,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: stairs_small_corner_with_emmision
       objectReference: {fileID: 0}
+    - target: {fileID: 115944, guid: 88e2387d52f16a24bbf3a98f88f690c0, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 491782, guid: 88e2387d52f16a24bbf3a98f88f690c0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -26
@@ -6882,6 +7136,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -7329,6 +7587,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Corridor_I (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.8
@@ -7398,6 +7660,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7517,6 +7783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &964900899 stripped
@@ -7591,6 +7861,10 @@ PrefabInstance:
     - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_Name
       value: floor_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 197360, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 469248, guid: 3845c7234a0ed4843ba4e38e2404f54d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7829,7 +8103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 978054849}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sketchy Stairs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8212,6 +8486,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CenterPlatform (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3159718159962237608, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -8326,6 +8604,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1005653583 stripped
@@ -8343,6 +8625,10 @@ PrefabInstance:
     - target: {fileID: 115944, guid: 88e2387d52f16a24bbf3a98f88f690c0, type: 3}
       propertyPath: m_Name
       value: stairs_small_corner_with_emmision (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115944, guid: 88e2387d52f16a24bbf3a98f88f690c0, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 491782, guid: 88e2387d52f16a24bbf3a98f88f690c0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8679,6 +8965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1073236636 stripped
@@ -8696,6 +8986,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8840,6 +9134,10 @@ PrefabInstance:
     - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_Name
       value: door1_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9177,6 +9475,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1143480236 stripped
@@ -9342,6 +9644,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door2_6
       objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9411,6 +9717,10 @@ PrefabInstance:
     - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_Name
       value: Platform_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4830879784700914, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9530,6 +9840,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1203683843 stripped
@@ -9547,6 +9861,10 @@ PrefabInstance:
     - target: {fileID: 2178360624954013083, guid: 759e7a78a90678e4185df4d307acbce3, type: 3}
       propertyPath: m_Name
       value: final astronaut fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: 2178360624954013083, guid: 759e7a78a90678e4185df4d307acbce3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2909411853555861384, guid: 759e7a78a90678e4185df4d307acbce3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9616,6 +9934,10 @@ PrefabInstance:
     - target: {fileID: 152896, guid: d17bc9c1cdef1c5448255edad31c1c61, type: 3}
       propertyPath: m_Name
       value: Corridor_X
+      objectReference: {fileID: 0}
+    - target: {fileID: 152896, guid: d17bc9c1cdef1c5448255edad31c1c61, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 462610, guid: d17bc9c1cdef1c5448255edad31c1c61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9848,6 +10170,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door1_6
       objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32
@@ -9973,6 +10299,10 @@ PrefabInstance:
     - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_Name
       value: Terrarium (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2653632991520276766, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_LocalScale.y
@@ -10106,6 +10436,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10587,6 +10921,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1275999535 stripped
@@ -10649,6 +10987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1277175093 stripped
@@ -10666,6 +11008,10 @@ PrefabInstance:
     - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_Name
       value: Platform_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4830879784700914, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11792,6 +12138,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1380278119 stripped
@@ -11924,6 +12274,10 @@ PrefabInstance:
     - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_Name
       value: door2_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12113,6 +12467,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1430107325 stripped
@@ -12204,6 +12562,10 @@ PrefabInstance:
     - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_Name
       value: door1_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12790,6 +13152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1527021406 stripped
@@ -12807,6 +13173,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12925,6 +13295,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -13145,6 +13519,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13482,6 +13860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door1_5
       objectReference: {fileID: 0}
+    - target: {fileID: 125588, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 451040, guid: ea798cfb4939d4441b95d1bd39d0767f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -13596,6 +13978,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1605574565 stripped
@@ -13699,6 +14085,121 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611885062}
   m_Mesh: {fileID: 4300000, guid: 45b0c780de07415429014e5e666d90ac, type: 3}
+--- !u!1 &1619789884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1619789888}
+  - component: {fileID: 1619789885}
+  - component: {fileID: 1619789887}
+  - component: {fileID: 1619789886}
+  m_Layer: 0
+  m_Name: Camera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!20 &1619789885
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619789884}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 0
+  orthographic size: 5
+  m_Depth: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 1
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!114 &1619789886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619789884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_CameraOutput: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+--- !u!81 &1619789887
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619789884}
+  m_Enabled: 1
+--- !u!4 &1619789888
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1619789884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 193801078}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1620772927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13828,6 +14329,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14180,6 +14685,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: floor_6
       objectReference: {fileID: 0}
+    - target: {fileID: 106282, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 439240, guid: 548a40efc092c6f408cc4d1691b171cc, type: 3}
       propertyPath: m_LocalPosition.x
       value: 37.5
@@ -14464,6 +14973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platform_02
       objectReference: {fileID: 0}
+    - target: {fileID: 1603757608580604, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4830879784700914, guid: 66d63c8e7fa7b40edadf4e8db013e0af, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10
@@ -14537,6 +15050,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14751,7 +15268,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1768992973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GlassRoom (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14861,6 +15378,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15146,6 +15667,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &1788137690 stripped
@@ -15225,6 +15750,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15508,7 +16037,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1830138743}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: GlassRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15545,6 +16074,36 @@ Transform:
   - {fileID: 1741140788}
   m_Father: {fileID: 1387174737}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1833363052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1833363053}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1833363053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833363052}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: -2, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 193801078}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1849506088
 PrefabInstance:
@@ -15867,6 +16426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: door2_4
       objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32
@@ -15988,6 +16551,10 @@ PrefabInstance:
     - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
       propertyPath: m_Name
       value: Terrarium (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
@@ -16149,7 +16716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1900179210}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sketchy Stairs (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16461,6 +17028,10 @@ PrefabInstance:
     - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
       propertyPath: m_Name
       value: Scaffold (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
@@ -16859,6 +17430,10 @@ PrefabInstance:
     - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_Name
       value: Stairs_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887614336188704, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4213821010552246, guid: 43dc4545c3ec14cfa999975aaa905845, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17296,6 +17871,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &2039638267 stripped
@@ -17375,6 +17954,10 @@ PrefabInstance:
     - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_Name
       value: Corridor_I
+      objectReference: {fileID: 0}
+    - target: {fileID: 115042, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464552, guid: 64b3f36e835346747865afbf6cf62acf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17614,7 +18197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2142772721}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corridor_Stair (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17714,6 +18297,10 @@ PrefabInstance:
     - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_Name
       value: door2_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 115324, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 415124, guid: 820591594dcfa124d8a9c5d016d6c22c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18077,7 +18664,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1831660526652011226}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Corridor_Stair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18293,6 +18880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Terrarium
       objectReference: {fileID: 0}
+    - target: {fileID: 2653632990626110003, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0fb3c82ef6e4b4e8192af6cbf0447c5b, type: 3}
 --- !u!1001 &6590244160844313468
@@ -18350,6 +18941,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaffold
       objectReference: {fileID: 0}
+    - target: {fileID: 6232784043120679893, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4722aed2b2edf4aba9329ea1af837b3a, type: 3}
 --- !u!4 &6590244160844313469 stripped
@@ -18367,6 +18962,10 @@ PrefabInstance:
     - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_Name
       value: CenterPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 2311274205260912456, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3159718159962237608, guid: 39853179171c645dfaad9ab5c4b2db83, type: 3}
       propertyPath: m_LocalPosition.x
