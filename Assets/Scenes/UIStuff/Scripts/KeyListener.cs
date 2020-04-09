@@ -6,6 +6,10 @@ public class KeyListener : MonoBehaviour
 {
     public Activator activator;
     public LifeTracker lifeTracker;
+    public LifeTracker teamMate1Life;
+    public LifeTracker teamMate2Life;
+    public LifeTracker teamMate3Life;
+    public LifeTracker teamMate4Life;
     public GameObject menu;
     public GameObject teamDisplay;
     public SetCursor setCursor;
@@ -45,5 +49,21 @@ public class KeyListener : MonoBehaviour
 		{
             lifeTracker.Decrement();
 		}
+        if (Input.GetKeyDown("1"))
+		{
+            teamMate1Life.Decrement();
+		}
+        if (Input.GetKeyDown("2"))
+        {
+            teamMate2Life.Decrement();
+        }
+        if (Input.GetKeyDown("3"))
+        {
+            teamMate3Life.Decrement();
+        }
+        if (Input.GetKeyDown("4"))
+        {
+            teamMate4Life.Decrement();
+        }
     }
 }
