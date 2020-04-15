@@ -1,20 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Networking;
 using UnityEngine;
 
-public class MoveMe : MonoBehaviour
+public class MoveMe : NetworkBehaviour
 {
     
     private CharacterController _controller;
-    [SerializeField] private float speed;
-    [SerializeField] private float power;
-    [SerializeField] private float gravity;
-    [SerializeField] private GameObject _groundChecker;
-    [SerializeField] private float groundDistance;
-    [SerializeField] private Camera _camera;
-    [SerializeField] private float max_up;
-    [SerializeField] private float jump;
-    [SerializeField] private float outTripRadius;
+    public float speed = 20;
+    public float power = 1.05f;
+    public float gravity = -20;
+    public float groundDistance = 1.1f;
+    public float max_up = 10;
+    public float jump = 20;
+    public float outTripRadius = 5;
+    private GameObject _groundChecker;
+    private GameObject _camera;
     private float sqrInTripRadius;
     private float rotationSpeed = 50f;
     private float RotationMultiplier = 0.2f;
@@ -35,8 +36,16 @@ public class MoveMe : MonoBehaviour
         Cursor.visible = false;
         //_cameraVertAngle = 45;
         sqrInTripRadius = (outTripRadius - 1) * (outTripRadius - 1);
-        transform.position = new Vector3(PlayerPrefs.GetFloat("Player_x"), PlayerPrefs.GetFloat("Player_y"), PlayerPrefs.GetFloat("Player_z"));
+        //transform.position = new Vector3(PlayerPrefs.GetFloat("Player_x"), PlayerPrefs.GetFloat("Player_y"), PlayerPrefs.GetFloat("Player_z"));
         //transform.Rotate(PlayerPrefs.GetFloat("Player_rx"), PlayerPrefs.GetFloat("Player_ry"), PlayerPrefs.GetFloat("Player_rz"));
+        _groundChecker = this.transform.GetChild(0).gameObject;
+        _camera = this.transform.GetChild(1).gameObject;
+
+        if (isLocalPlayer)
+        {
+            _camera.GetComponent<Camera>().enabled = true;
+            _camera.GetComponent<AudioListener>().enabled = true;
+        }
     }
 
     // Update is called once per frame
@@ -45,9 +54,7 @@ public class MoveMe : MonoBehaviour
         Vector3 move = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         move = Vector3.ClampMagnitude(move, 1);
         move = transform.TransformVector(move);
-        _controller.Move(move * Time.deltaTime * speed);
-        //if (move != Vector3.zero)
-        //    transform.forward = move.normalized;
+        //_controller.Move(move * Time.deltaTime * speed);
 
         _velocity.y += gravity * Time.deltaTime;
 
@@ -64,8 +71,11 @@ public class MoveMe : MonoBehaviour
         _velocity.y /= 1 + drag.x * Time.deltaTime;
         _velocity.z /= 1 + drag.x * Time.deltaTime;
 
-        _controller.Move(_velocity * Time.deltaTime);
-
+        if (isLocalPlayer)
+        {
+            _controller.Move((_velocity + move * speed) * Time.deltaTime);
+        }
+        //_controller.Move((_velocity + move * speed) * Time.deltaTime);
         //Debug.Log("Jump Press Status: " + Input.GetKey(KeyCode.Space));
         //Debug.Log("Grounded Status: " + _isGrounded);
         //Debug.Log("Ground Checker Position is " + _groundChecker.transform.position);
