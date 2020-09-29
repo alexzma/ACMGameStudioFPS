@@ -30,7 +30,7 @@ public class ButtonClick : MonoBehaviour
 
     void Awake()
 	{
-        DontDestroyOnLoad(this.gameObject);
+        //DontDestroyOnLoad(this.gameObject);
 	}
 
     public void Play()

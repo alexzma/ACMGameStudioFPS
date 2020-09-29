@@ -15,12 +15,13 @@ namespace UnityEngine.Networking
 
         // Start is called before the first frame update
         void Start()
-        { }
+        {
+            manager = GameObject.Find("Network Manager2").GetComponent<NetworkManager>();
+            //manager = GetComponent<NetworkManager>();
+        }
 
         void Awake()
-        {
-            manager = GetComponent<NetworkManager>();
-        }
+        { }
 
         // Update is called once per frame
         void Update()
@@ -30,6 +31,11 @@ namespace UnityEngine.Networking
         {
             manager.StartServer();
         }
+
+        public void StartHost()
+		{
+            manager.StartHost();
+		}
 
         public void StartClient()
         {

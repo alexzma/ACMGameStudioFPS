@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Stairs
+  - StairGoingDown
+  - StairGoingUp
+  - Obstacle
+  - Fire
+  - Wind
+  - Music
+  - Music2
   layers:
   - Default
   - TransparentFX
@@ -14,11 +22,11 @@ TagManager:
   - 
   - 
   - Ground
-  - Doors
+  - Door
+  - Local Gun
   - 
-  - 
-  - 
-  - 
+  - Local Player
+  - Remote Player
   - 
   - 
   - 

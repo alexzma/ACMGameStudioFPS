@@ -16,4 +16,14 @@ public class Activator : MonoBehaviour
 	{
         gameObject.SetActive(!gameObject.activeSelf);
 	}
+
+    public void Activate(GameObject gameObject)
+	{
+        gameObject.SetActive(true);
+	}
+
+    public void Deactivate(GameObject gameObject)
+	{
+        gameObject.SetActive(false);
+	}
 }
