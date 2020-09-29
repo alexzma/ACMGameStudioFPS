@@ -5,12 +5,10 @@ using UnityEngine;
 public class SetCursor : MonoBehaviour
 {
     public Texture2D image;
-    private bool isChanged;
     // Start is called before the first frame update
     void Start()
     {
-        ChangeCursor(image);
-        isChanged = true;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -19,23 +17,16 @@ public class SetCursor : MonoBehaviour
 
     void OnDestroy()
 	{
-        ResetCursor();
-	}
+        Cursor.lockState = CursorLockMode.None;
+    }
 
-    public bool IsChanged()
-	{
-        return isChanged;
-	}
+    public void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
 
-    public void ResetCursor()
-	{
-        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
-        isChanged = false;
-	}
-
-    public void ChangeCursor(Texture2D image)
-	{
-        Cursor.SetCursor(image, Vector2.zero, CursorMode.Auto);
-        isChanged = true;
-	}
+    public void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 }

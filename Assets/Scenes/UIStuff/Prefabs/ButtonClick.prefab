@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2832619430075922905}
   - component: {fileID: 2832619430075922906}
-  - component: {fileID: 2832619430075922904}
+  - component: {fileID: 1414467127003372437}
   m_Layer: 0
   m_Name: ButtonClick
   m_TagString: Untagged
@@ -128,7 +128,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2832619430075922904
+--- !u!114 &1414467127003372437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2832619430075922907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163737564737f2373656e65637f25796, type: 3}
+  m_Script: {fileID: 11500000, guid: 01dfe882100000000adfe88210000000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wait_time: 1

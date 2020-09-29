@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class LifeTracker : MonoBehaviour
 {
     public Text hpText;
     public Slider slider;
-    public string loseScene;
+    public GameObject deathCanvas;
     public Image healthbar;
     public bool isPlayer;
+    public GameObject blood1;
+    public GameObject blood2;
+    public Activator activator;
+    public AppendText appendText;
 
     private float hp;
     private float max_hp;
@@ -19,24 +22,52 @@ public class LifeTracker : MonoBehaviour
     {
         hp = slider.maxValue;
         max_hp = hp;
+
+        appendText = GameObject.Find("Scroll View").transform.GetChild(0).GetChild(0).GetComponent<AppendText>();
     }
 
     void UpdateUI()
 	{
-        hpText.text = $"{hp} hp";
+        hpText.text = $"{hp} HP";
         slider.value = hp;
-        if (hp / max_hp < 0.75f && hp / max_hp > 0.25f)
+        if (hp / max_hp > 0.75f)
+        {
+            healthbar.color = new Color32(0, 255, 0, 255);
+            if (isPlayer)
+            {
+                activator.Deactivate(blood1);
+                activator.Deactivate(blood2);
+            }
+        }
+        else if (hp / max_hp < 0.75f && hp / max_hp > 0.25f)
         {
             healthbar.color = new Color32(255, 255, 0, 255);
+            if (isPlayer)
+            {
+                activator.Activate(blood1);
+                activator.Deactivate(blood2);
+            }
         }
         else if (hp / max_hp < 0.25f && hp / max_hp > 0)
         {
             healthbar.color = new Color32(255, 0, 0, 255);
+            if (isPlayer)
+            {
+                activator.Deactivate(blood1);
+                activator.Activate(blood2);
+            }
         }
         else if (hp / max_hp <= 0 && isPlayer)
         {
-            SceneManager.LoadScene(loseScene);
+            healthbar.color = new Color32(255, 0, 0, 255);
+            activator.Deactivate(blood1);
+            activator.Activate(blood2);
+            //activator.Activate(deathCanvas);
         }
+        //else if (hp / max_hp <= 0 && !isPlayer && appendText)
+        //{
+        //    appendText.appendKill("Host", "Player");
+        //}
     }
 
     public void Increment()
@@ -63,6 +94,7 @@ public class LifeTracker : MonoBehaviour
 		{
             hp = max_hp;
 		}
+        UpdateUI();
 	}
 
     public void Decrement()
@@ -89,6 +121,7 @@ public class LifeTracker : MonoBehaviour
         {
             hp = max_hp;
         }
+        UpdateUI();
     }
 
     public void SetHP(float health)
@@ -98,6 +131,11 @@ public class LifeTracker : MonoBehaviour
             hp = health;
             UpdateUI();
 		}
+	}
+
+    public float GetHP()
+	{
+        return hp;
 	}
 
     // Update is called once per frame

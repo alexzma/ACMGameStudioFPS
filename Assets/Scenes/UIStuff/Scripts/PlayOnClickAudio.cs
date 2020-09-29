@@ -15,7 +15,7 @@ public class PlayOnClickAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if(Input.GetMouseButtonDown(0) && setCursor.IsChanged() && !menu.activeSelf){
+		if(Input.GetMouseButtonDown(0) && Cursor.visible && !menu.activeSelf){
             audioSource.Play();
 		}
     }
