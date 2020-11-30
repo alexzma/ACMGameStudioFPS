@@ -1,7 +1,9 @@
 # ACMGameStudioFPS
 
 This project is a networked FPS developed by students at ACM Game Studio at UCLA.
-A compiled version of this game can be found at https://alexzma.itch.io/elimination
+
+A compiled version of this game can be found at https://alexzma.itch.io/elimination.
+
 //TODO Add more detail and pics
 
 # Contributors:  
